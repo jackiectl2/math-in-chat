@@ -1,5 +1,8 @@
 # math-in-chat
 
+This repository holds two small Claude skills for studying: `math-in-chat` (math renders as LaTeX) and
+`visual-explanations` (explain with diagrams, examples and interactive sliders). Install each the same way.
+
 A Claude skill that makes Claude write math in chat replies as LaTeX, so formulas render in the
 Claude apps (claude.ai, desktop, mobile, and Claude Code on the web) instead of breaking into
 stray italics.
@@ -30,3 +33,10 @@ Skills are model-invoked: Claude sees each enabled skill's name and description 
 skill when a reply matches, with no slash command needed. The description here is written to match
 any reply that contains math. Triggering is a judgment by the model, so for a must-always rule in a
 specific project, also put the rule in that repository's `CLAUDE.md`, which is loaded every session.
+
+## visual-explanations
+
+[`skills/visual-explanations/SKILL.md`](skills/visual-explanations/SKILL.md) records the student's learning
+habit: explain concepts and formulas with a diagram and an example (course slides first, otherwise freely
+drawn), and build slider / button interactive pages when several variables change the picture. Upload it to
+claude.ai the same way as `math-in-chat` (zip `visual-explanations/` with `SKILL.md` at its root).
