@@ -1,0 +1,11 @@
+{
+  "source_repository": "jackiectl2/math-in-chat",
+  "source_commit": "a3b04c4d65665847a874e893acacf4b6391f3469",
+  "sources": [
+    {
+      "path": "skills/math-in-chat/SKILL.md",
+      "sha256": "81ce152054c524c9a994976cb58c6b9e2fbc24e66d7889d40c357f44a4ea2c10"
+    }
+  ],
+  "adaptation": "Preserve rules and resources; adapt skill discovery, invocation, agent instructions, and output delivery for Codex."
+}
