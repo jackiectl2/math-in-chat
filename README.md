@@ -12,6 +12,20 @@ The rules are in [`skills/math-in-chat/SKILL.md`](skills/math-in-chat/SKILL.md).
 
 ## Install
 
+**Claude Code / Codex（同一仓库，两种原生入口）**
+
+本仓库的 `main` 同时包含 `.claude/skills/math-in-chat/` 和 `.agents/skills/math-in-chat/`。
+根目录 `CLAUDE.md` 与 `AGENTS.md` 分别指向对应规则，原始 `skills/math-in-chat/` 继续保留。
+要接入一门课程，可从本仓库运行：
+
+```bash
+python3 scripts/install_skills.py --target /absolute/path/to/course
+```
+
+安装器同时复制两个平台的完整技能文件夹；重复运行时保留相同副本，遇到不同内容会停下，绝不直接覆盖。
+若不准备提交这些本地副本，可在课程仓库自己的 `.git/info/exclude` 中排除相应路径。
+原生技能列表可能需要重新加载；当前会话仍可直接读取对应 `SKILL.md` 并遵循其规则。
+
 **claude.ai (applies to all your chats and to Claude Code cloud sessions)**
 
 1. Zip the skill folder so the zip contains `math-in-chat/SKILL.md` at its root:
@@ -54,4 +68,4 @@ Codex 原生技能文档：https://developers.openai.com/codex/skills 。技能�
 - 安装 URL：https://github.com/jackiectl2/math-in-chat/tree/main/.agents/skills/math-in-chat
 - 显式使用：`$math-in-chat 请按这个技能排版接下来的数学解释。`
 
-若你在尚未合并的开发分支上，安装 URL 的 `main` 要换成该分支；确认文件已在 GitHub 对应分支上后再安装。
+两个平台的版本统一维护在 `main`。更新原始 Claude 规则时，也同步 `.claude/skills/math-in-chat/SKILL.md`；Codex 版保留对应规则并适配客户端差异。
