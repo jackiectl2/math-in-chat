@@ -1,0 +1,14 @@
+{
+  "name": "math-in-chat",
+  "version": "1.0.0",
+  "description": "Codex counterparts of the original Claude skills, with the originals preserved.",
+  "author": {
+    "name": "jackiectl2"
+  },
+  "repository": "https://github.com/jackiectl2/math-in-chat",
+  "skills": "./.agents/skills/",
+  "interface": {
+    "displayName": "Math in Chat",
+    "shortDescription": "Math formatting"
+  }
+}
